@@ -1,0 +1,68 @@
+<extension>
+  <modules>
+    <module>
+      <id>I-frame Preview customizations</id>
+      <version>1.0</version>
+      <auto-deploy>true</auto-deploy>
+      <evaluator type="dk.magenta.page.id.module.evaluator">
+        <params>
+          <pageId>iframe-preview</pageId>
+        </params>
+      </evaluator>
+
+      <configurations>
+        <!-- Merge in our new action -->
+        <config evaluator="string-compare" condition="DocLibActions">
+          <actions>
+            <!-- Define a new action to open the document-details page in a new window. -->
+            <action id="document-view-in-alfresco" type="link"
+                    label="actions.document.view">
+              <param name="href">{documentDetailsUrl}</param>
+              <param name="target">_blank</param>
+            </action>
+          </actions>
+        </config>
+
+        <!-- Replace existing action groups -->
+        <config evaluator="string-compare" condition="DocLibActions" replace="true">
+          <!--
+             Action Group definitions
+          -->
+          <actionGroups>
+            <actionGroup id="document-details">
+              <action index="100" id="document-download" />
+              <action index="105" id="document-view-in-alfresco"/>
+              <!--<action index="110" id="document-view-content" />-->
+              <!--<action index="120" id="document-edit-metadata" />-->
+              <!--<action index="130" id="document-upload-new-version" />-->
+              <!--<action index="140" id="document-view-original" />-->
+              <!--<action index="150" id="document-view-working-copy" />-->
+              <!--<action index="160" id="document-approve" />-->
+              <!--<action index="170" id="document-reject" />-->
+              <!--<action index="180" id="document-inline-edit" />-->
+              <action index="190" id="document-edit-online" />
+              <!--<action index="191" id="document-edit-online-aos" />-->
+              <!--<action index="200" id="document-edit-offline" />-->
+              <!--<action index="240" id="document-copy-to" />-->
+              <!--<action index="250" id="document-move-to" />-->
+              <!--<action index="260" id="document-delete" />-->
+              <!--<action index="270" id="document-assign-workflow" />-->
+              <!--<action index="280" id="document-cancel-editing" />-->
+              <!--<action index="285" id="document-cancel-editing-unlock" icon="document-cancel-editing"/>-->
+              <!--<action index="290" id="document-manage-granular-permissions" />-->
+              <!--<action index="300" id="document-manage-repo-permissions" />-->
+              <!--<action index="310" id="document-manage-aspects" />-->
+              <!--<action index="320" id="document-change-type" />-->
+              <!--<action index="330" id="document-view-in-source-repository" />-->
+              <!--<action index="350" id="document-view-googlemaps" />-->
+              <!--<action index="360" id="document-cloud-sync" />-->
+              <!--<action index="370" id="document-cloud-unsync" />-->
+              <!--<action index="380" id="document-view-in-cloud" />-->
+              <!--<action index="390" id="document-request-sync"/>-->
+            </actionGroup>
+          </actionGroups>
+        </config>
+      </configurations>
+    </module>
+  </modules>
+</extension>

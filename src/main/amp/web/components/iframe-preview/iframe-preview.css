@@ -1,0 +1,46 @@
+/* Override the action icons */
+.iframe-preview .doclist .document-download a {
+    background-image: url(actions/document-download-16.png) !important;
+}
+
+.iframe-preview .doclist .document-edit-online a {
+    background-image: url(actions/document-edit-online-16.png) !important;
+}
+
+.iframe-preview .doclist .document-view-in-alfresco a {
+    background-image: url(actions/document-view-in-alfresco-16.png) !important;
+}
+
+/* Display the actions on one line */
+.iframe-preview .doclist .action-set div {
+    display: inline-block;
+}
+
+/* Allow use of larger icons, by filling the space */
+.iframe-preview .doclist .action-set a {
+    background-position: inherit;
+    background-size: contain;
+}
+
+/* Remove border */
+.iframe-preview .doclist .action-set a,
+.iframe-preview .doclist .action-set a:hover {
+    border: none !important;
+}
+
+/* Hide the action display label text */
+.doclist a span {
+    display: none;
+}
+
+/* Hide the "Document actions" heading */
+.document-actions h2 {
+    display: none;
+}
+
+/* Get rid of the styling of the document details panel */
+.iframe-preview .document-details-panel {
+    background-color: inherit;
+    border-top: inherit;
+    padding: inherit;
+}
