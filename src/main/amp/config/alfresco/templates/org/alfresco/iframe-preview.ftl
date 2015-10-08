@@ -3,6 +3,11 @@
   <@script type="text/javascript" src="${url.context}/res/modules/documentlibrary/doclib-actions.js" group="document-details"/>
   <@link rel="stylesheet" type="text/css" href="${url.context}/res/components/document-details/document-details-panel.css" group="document-details"/>
   <@link rel="stylesheet" type="text/css" href="${url.context}/res/components/iframe-preview/iframe-preview.css" group="document-details"/>
+
+  <!-- HTMLPreviewer dependencies -->
+  <@script type="text/javascript" src="${url.context}/res/components/preview/HTMLPreviewer.js" group="web-preview"/>
+  <@link rel="stylesheet" type="text/css" href="${url.context}/res/components/preview/HTMLPreviewer.css" group="web-preview"/>
+
   <@templateHtmlEditorAssets />
 </@>
 
