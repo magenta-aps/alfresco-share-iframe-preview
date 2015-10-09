@@ -1,25 +1,25 @@
 /* Override the action icons */
 .iframe-preview .doclist .document-download a {
-    background-image: url(actions/document-download-16.png) !important;
+    background-image: url(actions/document-download-24.png) !important;
 }
 
 .iframe-preview .doclist .document-edit-online a {
-    background-image: url(actions/document-edit-online-16.png) !important;
+    background-image: url(actions/document-edit-online-24.png) !important;
 }
 
 .iframe-preview .doclist .document-view-in-alfresco a {
-    background-image: url(actions/document-view-in-alfresco-16.png) !important;
+    background-image: url(actions/document-view-in-alfresco-24.png) !important;
 }
 
 /* Display the actions on one line */
 .iframe-preview .doclist .action-set div {
-    display: inline-block;
+    display: inline-block !important;
+    padding: .3em .6em !important;
 }
 
 /* Allow use of larger icons, by filling the space */
 .iframe-preview .doclist .action-set a {
-    background-position: inherit;
-    background-size: contain;
+    background-position: inherit !important;
 }
 
 /* Remove border */
