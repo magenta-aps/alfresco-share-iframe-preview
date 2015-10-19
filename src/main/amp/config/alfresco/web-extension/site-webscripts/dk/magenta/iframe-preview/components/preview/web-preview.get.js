@@ -16,6 +16,25 @@ if (model.widgets && context.pageId == 'iframe-preview')
                     attributes: {}
                 }]
             });
+            //conditions.push({
+            //    attributes: {
+            //        mimeType: "application/pdf"
+            //    },
+            //    plugins: [{
+            //        name: "HTMLPreviewer",
+            //        attributes: {}
+            //    }]
+            //});
+            // Show PDFs still using PdfJs
+            conditions.push({
+                attributes: {
+                    mimeType: "application/pdf"
+                },
+                plugins: [{
+                    name: "PdfJs",
+                    attributes: { progressiveLoading: false }
+                }]
+            });
             conditions.push({
                 attributes: {
                     thumbnail: "html"

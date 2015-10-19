@@ -10,6 +10,13 @@
         </params>
       </evaluator>
 
+      <customizations>
+        <customization>
+          <targetPackageRoot>org.alfresco.components.head</targetPackageRoot>
+          <sourcePackageRoot>dk.magenta.iframe-preview.components.head</sourcePackageRoot>
+        </customization>
+      </customizations>
+
       <configurations>
         <!-- Merge in our new action -->
         <config evaluator="string-compare" condition="DocLibActions">
