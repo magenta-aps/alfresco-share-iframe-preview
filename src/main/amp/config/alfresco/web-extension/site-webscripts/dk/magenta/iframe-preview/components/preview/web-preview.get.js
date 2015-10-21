@@ -16,15 +16,6 @@ if (model.widgets && context.pageId == 'iframe-preview')
                     attributes: {}
                 }]
             });
-            //conditions.push({
-            //    attributes: {
-            //        mimeType: "application/pdf"
-            //    },
-            //    plugins: [{
-            //        name: "HTMLPreviewer",
-            //        attributes: {}
-            //    }]
-            //});
             // Show PDFs still using PdfJs
             conditions.push({
                 attributes: {
@@ -35,6 +26,22 @@ if (model.widgets && context.pageId == 'iframe-preview')
                     attributes: { progressiveLoading: false }
                 }]
             });
+
+            // Use PdfJs to preview presentations
+            var slideshowMimeTypes = "application/vnd.ms-powerpoint application/vnd.ms-powerpoint.addin.macroenabled.12 application/vnd.ms-powerpoint.presentation.macroenabled.12 application/vnd.ms-powerpoint.slide.macroenabled.12 application/vnd.ms-powerpoint.slideshow.macroenabled.12 application/vnd.ms-powerpoint.template.macroenabled.12 application/vnd.oasis.opendocument.presentation application/vnd.oasis.opendocument.presentation-template application/vnd.openxmlformats-officedocument.presentationml.presentation application/vnd.openxmlformats-officedocument.presentationml.slide application/vnd.openxmlformats-officedocument.presentationml.slideshow application/vnd.openxmlformats-officedocument.presentationml.template".split(" ");
+
+            for (var m = 0; m < slideshowMimeTypes.length; m++) {
+                conditions.push({
+                    attributes: {
+                        mimeType: slideshowMimeTypes[m]
+                    },
+                    plugins: [{
+                        name: "PdfJs",
+                        attributes: { src: "pdf", progressiveLoading: false }
+                    }]
+                });
+            }
+
             conditions.push({
                 attributes: {
                     thumbnail: "html"
