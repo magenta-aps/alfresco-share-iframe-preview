@@ -11,6 +11,10 @@
     background-image: url(actions/document-view-in-alfresco-24.png) !important;
 }
 
+.iframe-preview .doclist .action-set {
+    margin-top: .5em !important;
+}
+
 /* Display the actions on one line */
 .iframe-preview .doclist .action-set div {
     display: inline-block !important;
@@ -43,4 +47,10 @@
     background-color: inherit;
     border-top: inherit;
     padding: inherit;
+}
+
+.node-header .node-info,
+.node-header .node-action,
+.node-header .clear {
+    display: none !important;
 }

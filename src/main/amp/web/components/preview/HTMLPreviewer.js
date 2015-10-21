@@ -66,7 +66,6 @@ Alfresco.WebPreview.prototype.Plugins.HTMLPreviewer.prototype =
       });
       iframe.load(function () {
         $(this).height($(this).contents().outerHeight());
-        $this.postWindowHeight();
       });
       iframe.appendTo(previewElement);
     });
@@ -95,14 +94,6 @@ Alfresco.WebPreview.prototype.Plugins.HTMLPreviewer.prototype =
     //      scope: this
     //    });
     return null;
-  },
-
-  postWindowHeight: function () {
-    function getHeight() {
-      var body = document.body, html = document.documentElement;
-      return Math.max(body.scrollHeight, body.offsetHeight, html.offsetHeight);
-    }
-    window.parent.postMessage({iframeHeight:getHeight()}, '*');
   },
 
   /**

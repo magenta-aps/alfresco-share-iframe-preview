@@ -16,4 +16,27 @@
     <bean id="dk.magenta.page.id.module.evaluator"
           class="dk.magenta.surf.extensibility.SlingshotPageIdModuleEvaluator" />
 
+    <!-- Add module specific messages and labels -->
+    <bean id="dk.magenta.iframe-preview.resources"
+          class="org.springframework.extensions.surf.util.ResourceBundleBootstrapComponent">
+        <property name="resourceBundles">
+            <list>
+                <value>alfresco.web-extension.messages.iframe-preview</value>
+            </list>
+        </property>
+    </bean>
+
+
+    <!--<bean id="webscripts.resources"-->
+          <!--class="org.alfresco.i18n.ResourceBundleBootstrapComponent">-->
+
+        <!--<property name="resourceBundles">-->
+            <!--<list>-->
+                <!--<value>alfresco.messages.webscripts</value>-->
+                <!--<value>alfresco.messages.slingshot</value>-->
+                <!--<value>alfresco.web-extension.messages.kbsite</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
 </beans>

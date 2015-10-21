@@ -23,7 +23,7 @@
           <actions>
             <!-- Define a new action to open the document-details page in a new window. -->
             <action id="document-view-in-alfresco" type="link"
-                    label="actions.document.view">
+                    label="actions.document.view-in-alfresco">
               <param name="href">{documentDetailsUrl}</param>
               <param name="target">_blank</param>
             </action>

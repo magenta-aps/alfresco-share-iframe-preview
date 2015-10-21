@@ -4,6 +4,8 @@
   <@link rel="stylesheet" type="text/css" href="${url.context}/res/components/document-details/document-details-panel.css" group="document-details"/>
   <@link rel="stylesheet" type="text/css" href="${url.context}/res/components/iframe-preview/iframe-preview.css" group="document-details"/>
 
+  <@script type="text/javascript" src="${url.context}/res/components/preview/report-iframe-height.js" group="web-preview"/>
+
   <!-- HTMLPreviewer dependencies -->
   <@script type="text/javascript" src="${url.context}/res/components/preview/HTMLPreviewer.js" group="web-preview"/>
   <@link rel="stylesheet" type="text/css" href="${url.context}/res/components/preview/HTMLPreviewer.css" group="web-preview"/>
@@ -22,7 +24,7 @@
   <div id="bd" class="iframe-preview">
     <@region id="actions-common" scope="template"/>
     <@region id="actions" scope="template"/>
-    <#--<@region id="node-header" scope="template"/>-->
+    <@region id="node-header" scope="template"/>
     <@region id="document-actions" scope="template"/>
     <#if (config.scoped['DocumentDetails']['document-details'].getChildValue('display-web-preview') == "true")>
       <@region id="web-preview" scope="template"/>

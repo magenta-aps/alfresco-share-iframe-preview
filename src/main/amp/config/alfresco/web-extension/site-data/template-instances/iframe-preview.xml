@@ -73,75 +73,75 @@
             <!--</sub-components>-->
         <!--</component>-->
 
-        <!--&lt;!&ndash; Document Header &ndash;&gt;-->
-        <!--<component>-->
-            <!--<region-id>node-header</region-id>-->
-            <!--<sub-components>-->
-                <!--<sub-component id="default">-->
-                    <!--<evaluations>-->
-                        <!--&lt;!&ndash; if in site: Site header &ndash;&gt;-->
-                        <!--<evaluation id="site">-->
-                            <!--<evaluators>-->
-                                <!--<evaluator type="site.component.evaluator"/>-->
-                            <!--</evaluators>-->
-                            <!--<url>/components/node-details/node-header</url>-->
-                            <!--<properties>-->
-                                <!--<nodeRef>{nodeRef}</nodeRef>-->
-                                <!--<rootPage>documentlibrary</rootPage>-->
-                                <!--<rootLabelId>path.documents</rootLabelId>-->
-                            <!--</properties>-->
-                        <!--</evaluation>-->
+        <!-- Document Header -->
+        <component>
+            <region-id>node-header</region-id>
+            <sub-components>
+                <sub-component id="default">
+                    <evaluations>
+                        <!-- if in site: Site header -->
+                        <evaluation id="site">
+                            <evaluators>
+                                <evaluator type="site.component.evaluator"/>
+                            </evaluators>
+                            <url>/components/node-details/node-header</url>
+                            <properties>
+                                <nodeRef>{nodeRef}</nodeRef>
+                                <rootPage>documentlibrary</rootPage>
+                                <rootLabelId>path.documents</rootLabelId>
+                            </properties>
+                        </evaluation>
 
-                        <!--&lt;!&ndash; Check the page context using the "pagecontext" component evaluator-->
-                             <!--for access from either the "My Files" or "Shared Files" contexts. (the-->
-                             <!--page context is set via a URL token and the context allows the library-->
-                             <!--root to be set so that the document path is displayed correctly) &ndash;&gt;-->
-                        <!--<evaluation id="myfiles">-->
-                            <!--<evaluators>-->
-                                <!--<evaluator type="pagecontext.component.evaluator">-->
-                                    <!--<params>-->
-                                        <!--<pagecontext>mine</pagecontext>-->
-                                    <!--</params>-->
-                                <!--</evaluator>-->
-                            <!--</evaluators>-->
-                            <!--<url>/components/node-details/node-header</url>-->
-                            <!--<properties>-->
-                                <!--<nodeRef>{nodeRef}</nodeRef>-->
-                                <!--<libraryRoot>alfresco://user/home</libraryRoot>-->
-                                <!--<rootPage>context/mine/myfiles</rootPage>-->
-                                <!--<rootLabelId>location.path.myfiles</rootLabelId>-->
-                            <!--</properties>-->
-                        <!--</evaluation>-->
-                        <!--<evaluation id="shared">-->
-                            <!--<evaluators>-->
-                                <!--<evaluator type="pagecontext.component.evaluator">-->
-                                    <!--<params>-->
-                                        <!--<pagecontext>shared</pagecontext>-->
-                                    <!--</params>-->
-                                <!--</evaluator>-->
-                            <!--</evaluators>-->
-                            <!--<url>/components/node-details/node-header</url>-->
-                            <!--<properties>-->
-                                <!--<nodeRef>{nodeRef}</nodeRef>-->
-                                <!--<libraryRoot>alfresco://company/shared</libraryRoot>-->
-                                <!--<rootPage>context/shared/sharedfiles</rootPage>-->
-                                <!--<rootLabelId>location.path.shared</rootLabelId>-->
-                            <!--</properties>-->
-                        <!--</evaluation>-->
+                        <!-- Check the page context using the "pagecontext" component evaluator
+                             for access from either the "My Files" or "Shared Files" contexts. (the
+                             page context is set via a URL token and the context allows the library
+                             root to be set so that the document path is displayed correctly) -->
+                        <evaluation id="myfiles">
+                            <evaluators>
+                                <evaluator type="pagecontext.component.evaluator">
+                                    <params>
+                                        <pagecontext>mine</pagecontext>
+                                    </params>
+                                </evaluator>
+                            </evaluators>
+                            <url>/components/node-details/node-header</url>
+                            <properties>
+                                <nodeRef>{nodeRef}</nodeRef>
+                                <libraryRoot>alfresco://user/home</libraryRoot>
+                                <rootPage>context/mine/myfiles</rootPage>
+                                <rootLabelId>location.path.myfiles</rootLabelId>
+                            </properties>
+                        </evaluation>
+                        <evaluation id="shared">
+                            <evaluators>
+                                <evaluator type="pagecontext.component.evaluator">
+                                    <params>
+                                        <pagecontext>shared</pagecontext>
+                                    </params>
+                                </evaluator>
+                            </evaluators>
+                            <url>/components/node-details/node-header</url>
+                            <properties>
+                                <nodeRef>{nodeRef}</nodeRef>
+                                <libraryRoot>alfresco://company/shared</libraryRoot>
+                                <rootPage>context/shared/sharedfiles</rootPage>
+                                <rootLabelId>location.path.shared</rootLabelId>
+                            </properties>
+                        </evaluation>
 
-                        <!--&lt;!&ndash; otherwise: Repo header &ndash;&gt;-->
-                        <!--<evaluation id="repo">-->
-                            <!--<url>/components/node-details/node-header</url>-->
-                            <!--<properties>-->
-                                <!--<nodeRef>{nodeRef}</nodeRef>-->
-                                <!--<rootPage>repository</rootPage>-->
-                                <!--<rootLabelId>path.repository</rootLabelId>-->
-                            <!--</properties>-->
-                        <!--</evaluation>-->
-                    <!--</evaluations>-->
-                <!--</sub-component>-->
-            <!--</sub-components>-->
-        <!--</component>-->
+                        <!-- otherwise: Repo header -->
+                        <evaluation id="repo">
+                            <url>/components/node-details/node-header</url>
+                            <properties>
+                                <nodeRef>{nodeRef}</nodeRef>
+                                <rootPage>repository</rootPage>
+                                <rootLabelId>path.repository</rootLabelId>
+                            </properties>
+                        </evaluation>
+                    </evaluations>
+                </sub-component>
+            </sub-components>
+        </component>
 
         <!-- WebPreview -->
         <component>
