@@ -27,13 +27,14 @@ if (model.widgets && context.pageId == 'iframe-preview')
                 }]
             });
 
-            // Use PdfJs to preview presentations
-            var slideshowMimeTypes = "application/vnd.ms-powerpoint application/vnd.ms-powerpoint.addin.macroenabled.12 application/vnd.ms-powerpoint.presentation.macroenabled.12 application/vnd.ms-powerpoint.slide.macroenabled.12 application/vnd.ms-powerpoint.slideshow.macroenabled.12 application/vnd.ms-powerpoint.template.macroenabled.12 application/vnd.oasis.opendocument.presentation application/vnd.oasis.opendocument.presentation-template application/vnd.openxmlformats-officedocument.presentationml.presentation application/vnd.openxmlformats-officedocument.presentationml.slide application/vnd.openxmlformats-officedocument.presentationml.slideshow application/vnd.openxmlformats-officedocument.presentationml.template".split(" ");
+            // Use PdfJs to preview presentations/spreadsheets
+            var pdfJsMimeTypes = "application/vnd.ms-powerpoint" +
+                " application/vnd.ms-powerpoint.addin.macroenabled.12 application/vnd.ms-powerpoint.presentation.macroenabled.12 application/vnd.ms-powerpoint.slide.macroenabled.12 application/vnd.ms-powerpoint.slideshow.macroenabled.12 application/vnd.ms-powerpoint.template.macroenabled.12 application/vnd.oasis.opendocument.presentation application/vnd.oasis.opendocument.presentation-template application/vnd.openxmlformats-officedocument.presentationml.presentation application/vnd.openxmlformats-officedocument.presentationml.slide application/vnd.openxmlformats-officedocument.presentationml.slideshow application/vnd.openxmlformats-officedocument.presentationml.template application/vnd.oasis.opendocument.spreadsheet application/vnd.oasis.opendocument.spreadsheet-template application/vnd.sun.xml.calc application/vnd.sun.xml.calc.template application/vnd.ms-excel application/vnd.openxmlformats-officedocument.spreadsheetml.sheet application/vnd.openxmlformats-officedocument.spreadsheetml.template application/vnd.ms-excel.sheet.macroEnabled.12 application/vnd.ms-excel.template.macroEnabled.12 application/vnd.ms-excel.sheet.binary.macroEnabled.12".split(" ");
 
-            for (var m = 0; m < slideshowMimeTypes.length; m++) {
+            for (var m = 0; m < pdfJsMimeTypes.length; m++) {
                 conditions.push({
                     attributes: {
-                        mimeType: slideshowMimeTypes[m]
+                        mimeType: pdfJsMimeTypes[m]
                     },
                     plugins: [{
                         name: "PdfJs",
