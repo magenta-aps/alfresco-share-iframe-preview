@@ -107,6 +107,16 @@ Alfresco.WebPreview.prototype.Plugins.HTMLPreviewer.prototype =
     var ctx = {
       src: this.attributes.src ? this.wp.getThumbnailUrl(this.attributes.src) : this.wp.getContentUrl()
     };
+
+    // Get a problem with Share redirecting to the user dashboard when
+    // accessing the proxy page on first login. Therefore, don't use the proxy.
+    /* e.g. the following error occurs without the line below when
+     requesting the thumbnail:
+
+     INFO: org.tuckey.web.filters.urlrewrite.RewrittenUrl ERROR: response is comitted cannot forward to /page/proxy/alfresco/api/node/workspace/SpacesStore/e2e0d3ce-711e-48b1-bf64-f8ede1beaadc/content/thumbnails/html?c=force&lastMod
+     ified=html%3A1439456997647 (check you haven't done anything to the response (ie, written to it) before here)
+     */
+    ctx.src = ctx.src.replace("/share/proxy/alfresco", "/alfresco/wcs");
     return ctx;
   }
 
