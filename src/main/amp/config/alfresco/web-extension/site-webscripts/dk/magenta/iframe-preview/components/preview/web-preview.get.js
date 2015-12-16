@@ -1,4 +1,4 @@
-if (model.widgets && context.pageId == 'iframe-preview')
+if (model.widgets && context.pageId == 'iframe-preview' && '${html.previewer.enabled}' == 'true')
 {
     for (var i = 0; i < model.widgets.length; i++)
     {
