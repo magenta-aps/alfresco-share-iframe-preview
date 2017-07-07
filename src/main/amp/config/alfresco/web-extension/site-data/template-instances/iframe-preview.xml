@@ -29,49 +29,51 @@
             </sub-components>
         </component>
 
-        <!--&lt;!&ndash; Title &ndash;&gt;-->
-        <!--<component>-->
-            <!--<region-id>title</region-id>-->
-            <!--<sub-components>-->
-                <!--<sub-component id="default">-->
-                    <!--<evaluations>-->
-                        <!--&lt;!&ndash; if in site: Site title &ndash;&gt;-->
-                        <!--<evaluation id="site">-->
-                            <!--<evaluators>-->
-                                <!--<evaluator type="site.component.evaluator"/>-->
-                            <!--</evaluators>-->
-                            <!--<url>/components/title/collaboration-title</url>-->
-                        <!--</evaluation>-->
-                        <!--&lt;!&ndash; otherwise: Repository title &ndash;&gt;-->
-                        <!--<evaluation id="repo">-->
-                            <!--<url>/components/title/simple-title</url>-->
-                            <!--<properties>-->
-                                <!--<title>title.repository</title>-->
-                                <!--<subtitle>title.browser</subtitle>-->
-                            <!--</properties>-->
-                        <!--</evaluation>-->
-                    <!--</evaluations>-->
-                <!--</sub-component>-->
-            <!--</sub-components>-->
-        <!--</component>-->
+<!--
+        &lt;!&ndash; Title &ndash;&gt;
+        <component>
+            <region-id>title</region-id>
+            <sub-components>
+                <sub-component id="default">
+                    <evaluations>
+                        &lt;!&ndash; if in site: Site title &ndash;&gt;
+                        <evaluation id="site">
+                            <evaluators>
+                                <evaluator type="site.component.evaluator"/>
+                            </evaluators>
+                            <url>/components/title/collaboration-title</url>
+                        </evaluation>
+                        &lt;!&ndash; otherwise: Repository title &ndash;&gt;
+                        <evaluation id="repo">
+                            <url>/components/title/simple-title</url>
+                            <properties>
+                                <title>title.repository</title>
+                                <subtitle>title.browser</subtitle>
+                            </properties>
+                        </evaluation>
+                    </evaluations>
+                </sub-component>
+            </sub-components>
+        </component>
 
-        <!--&lt;!&ndash; Site Navigation &ndash;&gt;-->
-        <!--<component>-->
-            <!--<region-id>navigation</region-id>-->
-            <!--<sub-components>-->
-                <!--<sub-component id="default">-->
-                    <!--<evaluations>-->
-                        <!--&lt;!&ndash; if in site: Site navigation &ndash;&gt;-->
-                        <!--<evaluation id="site">-->
-                            <!--<evaluators>-->
-                                <!--<evaluator type="site.component.evaluator"/>-->
-                            <!--</evaluators>-->
-                            <!--<url>/components/navigation/collaboration-navigation</url>-->
-                        <!--</evaluation>-->
-                    <!--</evaluations>-->
-                <!--</sub-component>-->
-            <!--</sub-components>-->
-        <!--</component>-->
+        &lt;!&ndash; Site Navigation &ndash;&gt;
+        <component>
+            <region-id>navigation</region-id>
+            <sub-components>
+                <sub-component id="default">
+                    <evaluations>
+                        &lt;!&ndash; if in site: Site navigation &ndash;&gt;
+                        <evaluation id="site">
+                            <evaluators>
+                                <evaluator type="site.component.evaluator"/>
+                            </evaluators>
+                            <url>/components/navigation/collaboration-navigation</url>
+                        </evaluation>
+                    </evaluations>
+                </sub-component>
+            </sub-components>
+        </component>
+-->
 
         <!-- Document Header -->
         <component>

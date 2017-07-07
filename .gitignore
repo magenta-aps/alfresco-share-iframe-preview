@@ -1,4 +1,7 @@
-.idea
 *.iml
-alf_data_dev
-target
+/.idea
+/target/
+
+*.swp
+*.log
+log4j.properties
