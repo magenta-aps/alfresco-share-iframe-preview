@@ -44,8 +44,10 @@ This will use the resource bundle located at src/main/amp/config/alfresco/web-ex
 
         <!-- Used in share-config-custom.xml. By default points to standard location of Alfresco -->
         <alfresco.repo.url>http://localhost:8080/alfresco</alfresco.repo.url>
+        <!--<alfresco.repo.url>http://sublimeworks.eu/alfresco</alfresco.repo.url>-->
 
-        <alfresco.version>5.0.d</alfresco.version>
+        <alfresco.version>5.0.c</alfresco.version>
+        <!--<alfresco.version>5.0.d</alfresco.version>-->
         <!-- The following are default values for data location and Alfresco version.
              Uncomment if you need to change
         <alfresco.version>${alfresco.community.default.version}</alfresco.version> -->
@@ -115,23 +117,21 @@ This will use the resource bundle located at src/main/amp/config/alfresco/web-ex
                 </property>
             </activation>
             <properties>
-                <alfresco.version>5.0.c</alfresco.version>
+                <!--<alfresco.version>5.0.c</alfresco.version>-->
                 <html.previewer.enabled>true</html.previewer.enabled>
             </properties>
         </profile>
-
-        <!--
-            Brings in the extra Enterprise specific share classes,
-            if the 'enterprise' profile has been activated, needs to be activated manually. -->
+        
+        <!-- Brings in javascript console -->
         <profile>
-            <id>enterprise</id>
+            <id>js-console</id>
             <dependencies>
+                <!--js console-->
                 <dependency>
-                    <groupId>${alfresco.groupId}</groupId>
-                    <artifactId>share-enterprise</artifactId>
-                    <version>${alfresco.version}</version>
-                    <classifier>classes</classifier>
-                    <scope>provided</scope>
+                    <groupId>org.sharextras</groupId>
+                    <artifactId>javascript-console-share</artifactId>
+                    <version>1.0</version>
+                    <type>amp</type>
                 </dependency>
             </dependencies>
         </profile>
