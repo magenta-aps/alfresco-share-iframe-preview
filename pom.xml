@@ -3,15 +3,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>dk.magenta</groupId>
-    <artifactId>iframe-preview-share</artifactId>
+    <artifactId>html-thumbnail-preview</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>iframe-preview-share AMP project</name>
+    <name>Alfresco Share HTML thumbnail preview</name>
     <packaging>jar</packaging>
-    <description>Manages the lifecycle of the iframe-preview-share AMP (Alfresco Module Package)</description>
+    <description>
+        Displays the HTML rendition of a document in an iframe in alfresco share.
+    </description>
 
     <properties>
         <!-- Alfresco Maven Plugin version to use -->
-        <alfresco.sdk.version>3.0.0</alfresco.sdk.version>
+        <alfresco.sdk.version>3.0.1</alfresco.sdk.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 

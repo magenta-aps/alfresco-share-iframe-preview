@@ -2,13 +2,13 @@
 <@templateHeader>
   <@script type="text/javascript" src="${url.context}/res/modules/documentlibrary/doclib-actions.js" group="document-details"/>
   <@link rel="stylesheet" type="text/css" href="${url.context}/res/components/document-details/document-details-panel.css" group="document-details"/>
-  <@link rel="stylesheet" type="text/css" href="${url.context}/res/iframe-preview-share/components/iframe-preview/iframe-preview.css" group="document-details"/>
+  <@link rel="stylesheet" type="text/css" href="${url.context}/res/html-thumbnail-preview/components/iframe-preview/iframe-preview.css" group="document-details"/>
 
-  <@script type="text/javascript" src="${url.context}/res/iframe-preview-share/components/preview/report-iframe-height.js" group="web-preview"/>
+  <@script type="text/javascript" src="${url.context}/res/html-thumbnail-preview/components/preview/report-iframe-height.js" group="web-preview"/>
 
   <!-- HTMLPreviewer dependencies -->
-  <@script type="text/javascript" src="${url.context}/res/iframe-preview-share/components/preview/HTMLPreviewer.js" group="web-preview"/>
-  <@link rel="stylesheet" type="text/css" href="${url.context}/res/iframe-preview-share/components/preview/HTMLPreviewer.css" group="web-preview"/>
+  <@script type="text/javascript" src="${url.context}/res/html-thumbnail-preview/components/preview/HTMLPreviewer.js" group="web-preview"/>
+  <@link rel="stylesheet" type="text/css" href="${url.context}/res/html-thumbnail-preview/components/preview/HTMLPreviewer.css" group="web-preview"/>
 
   <@templateHtmlEditorAssets />
 </@>

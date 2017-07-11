@@ -1,6 +1,6 @@
-# alfresco-share-iframe-preview
+# Alfresco-share-HTML-thumbnail-preview
 AMP module for Alfresco Share.
-Show stripped-down version of document details page for use in an iframe.
+Show stripped-down version of document details page for use in an iframe to display the HTML rendition of a document or spreadsheet.
 
 The URL `/share/page/iframe-preview?nodeRef={nodeRef}` will show a document details page with just a few actions in a compact format.
 
@@ -14,6 +14,12 @@ If the HTML previewer is enabled, then an HTML rendition of the document
 will be used as the preview. This is dependent on the [htmlthumbnail](https://github.com/magenta-aps/htmlthumbnail/) module being installed on the repository 
 side. The default is disabled. To enable, pass the
 `-Dhtml.previewer.enabled=true` option to Maven.
+
+NOTE:
+This project was formerly called `iframe-preview-share`. The reason for the name change was due to amp installation 
+issues in alfresco. It is just much simpler to change the project module name (artifact-id) than to remove or change the
+version number in the db. (Un-installing the amp will not remove the db reference)
+
 
 ## Building
 
