@@ -26,17 +26,4 @@
         </property>
     </bean>
 
-
-    <!--<bean id="webscripts.resources"-->
-          <!--class="org.alfresco.i18n.ResourceBundleBootstrapComponent">-->
-
-        <!--<property name="resourceBundles">-->
-            <!--<list>-->
-                <!--<value>alfresco.messages.webscripts</value>-->
-                <!--<value>alfresco.messages.slingshot</value>-->
-                <!--<value>alfresco.web-extension.messages.kbsite</value>-->
-            <!--</list>-->
-        <!--</property>-->
-    <!--</bean>-->
-
 </beans>
