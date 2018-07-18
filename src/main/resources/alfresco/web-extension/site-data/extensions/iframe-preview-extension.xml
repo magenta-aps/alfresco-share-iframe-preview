@@ -50,10 +50,10 @@
                     <actionGroups>
                         <actionGroup id="document-details">
                             <action index="100" id="document-download"/>
-                            <action index="102" id="document-view-in-alfresco"/>
-                            <action index="104" id="document-edit-online-aos" appendEvaluators="true">
+                            <action index="102" id="document-edit-online-aos" appendEvaluators="true">
                                 <evaluator>evaluator.doclib.action.DocumentEnableInSmartFolder</evaluator>
                             </action>
+                            <action index="104" id="document-view-in-alfresco"/>
                         </actionGroup>
                     </actionGroups>
                 </config>
