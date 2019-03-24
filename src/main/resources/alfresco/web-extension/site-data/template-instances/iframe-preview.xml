@@ -29,52 +29,6 @@
             </sub-components>
         </component>
 
-<!--
-        &lt;!&ndash; Title &ndash;&gt;
-        <component>
-            <region-id>title</region-id>
-            <sub-components>
-                <sub-component id="default">
-                    <evaluations>
-                        &lt;!&ndash; if in site: Site title &ndash;&gt;
-                        <evaluation id="site">
-                            <evaluators>
-                                <evaluator type="site.component.evaluator"/>
-                            </evaluators>
-                            <url>/components/title/collaboration-title</url>
-                        </evaluation>
-                        &lt;!&ndash; otherwise: Repository title &ndash;&gt;
-                        <evaluation id="repo">
-                            <url>/components/title/simple-title</url>
-                            <properties>
-                                <title>title.repository</title>
-                                <subtitle>title.browser</subtitle>
-                            </properties>
-                        </evaluation>
-                    </evaluations>
-                </sub-component>
-            </sub-components>
-        </component>
-
-        &lt;!&ndash; Site Navigation &ndash;&gt;
-        <component>
-            <region-id>navigation</region-id>
-            <sub-components>
-                <sub-component id="default">
-                    <evaluations>
-                        &lt;!&ndash; if in site: Site navigation &ndash;&gt;
-                        <evaluation id="site">
-                            <evaluators>
-                                <evaluator type="site.component.evaluator"/>
-                            </evaluators>
-                            <url>/components/navigation/collaboration-navigation</url>
-                        </evaluation>
-                    </evaluations>
-                </sub-component>
-            </sub-components>
-        </component>
--->
-
         <!-- Document Header -->
         <component>
             <region-id>node-header</region-id>
@@ -172,30 +126,6 @@
             </sub-components>
         </component>
 
-        <!--&lt;!&ndash; Comments &ndash;&gt;-->
-        <!--<component>-->
-            <!--<region-id>comments</region-id>-->
-            <!--<url>/components/comments/list</url>-->
-            <!--<properties>-->
-                <!--<nodeRef>{nodeRef}</nodeRef>-->
-                <!--<activityType>document</activityType>-->
-            <!--</properties>-->
-        <!--</component>-->
-        <!--<component>-->
-            <!--<region-id>document-attachments</region-id>-->
-            <!--<url>/components/document-details/document-attachments</url>-->
-            <!--<properties>-->
-                <!--<nodeRef>{nodeRef}</nodeRef>-->
-            <!--</properties>-->
-        <!--</component>-->
-        <!--<component>-->
-            <!--<region-id>repo-document-attachments</region-id>-->
-            <!--<url>/components/document-details/document-attachments</url>-->
-            <!--<properties>-->
-                <!--<nodeRef>{nodeRef}</nodeRef>-->
-            <!--</properties>-->
-        <!--</component>-->
-
         <!-- Document Actions (incl commons) -->
         <component>
             <region-id>document-actions</region-id>
@@ -212,117 +142,6 @@
                 <dependencyGroup>document-details</dependencyGroup>
             </properties>
         </component>
-
-        <!--&lt;!&ndash; Document Tags &ndash;&gt;-->
-        <!--<component>-->
-            <!--<region-id>document-tags</region-id>-->
-            <!--<sub-components>-->
-                <!--<sub-component id="default">-->
-                    <!--<evaluations>-->
-                        <!--&lt;!&ndash; if in site: Site tags &ndash;&gt;-->
-                        <!--<evaluation id="site">-->
-                            <!--<evaluators>-->
-                                <!--<evaluator type="site.component.evaluator"/>-->
-                            <!--</evaluators>-->
-                            <!--<url>/components/document-details/document-tags</url>-->
-                            <!--<properties>-->
-                                <!--<nodeRef>{nodeRef}</nodeRef>-->
-                            <!--</properties>-->
-                        <!--</evaluation>-->
-                    <!--</evaluations>-->
-                <!--</sub-component>-->
-            <!--</sub-components>-->
-        <!--</component>-->
-
-        <!--&lt;!&ndash; Document Links &ndash;&gt;-->
-        <!--<component>-->
-            <!--<region-id>document-links</region-id>-->
-            <!--<url>/components/document-details/document-links</url>-->
-            <!--<properties>-->
-                <!--<nodeRef>{nodeRef}</nodeRef>-->
-            <!--</properties>-->
-        <!--</component>-->
-
-        <!--&lt;!&ndash; Document Metadata &ndash;&gt;-->
-        <!--<component>-->
-            <!--<region-id>document-metadata</region-id>-->
-            <!--<url>/components/document-details/document-metadata</url>-->
-            <!--<properties>-->
-                <!--<nodeRef>{nodeRef}</nodeRef>-->
-            <!--</properties>-->
-        <!--</component>-->
-
-        <!--&lt;!&ndash; Document Sync &ndash;&gt;-->
-        <!--<component>-->
-            <!--<region-id>document-sync</region-id>-->
-            <!--<url>/components/document-details/document-sync</url>-->
-            <!--<properties>-->
-                <!--<nodeRef>{nodeRef}</nodeRef>-->
-            <!--</properties>-->
-        <!--</component>-->
-
-        <!--&lt;!&ndash; Document Permissions &ndash;&gt;-->
-        <!--<component>-->
-            <!--<region-id>document-permissions</region-id>-->
-            <!--<sub-components>-->
-                <!--<sub-component id="default">-->
-                    <!--<evaluations>-->
-                        <!--&lt;!&ndash; if in site: Permissions &ndash;&gt;-->
-                        <!--<evaluation id="site">-->
-                            <!--<evaluators>-->
-                                <!--<evaluator type="site.component.evaluator"/>-->
-                            <!--</evaluators>-->
-                            <!--<url>/components/document-details/document-permissions</url>-->
-                            <!--<properties>-->
-                                <!--<nodeRef>{nodeRef}</nodeRef>-->
-                            <!--</properties>-->
-                        <!--</evaluation>-->
-                    <!--</evaluations>-->
-                <!--</sub-component>-->
-            <!--</sub-components>-->
-        <!--</component>-->
-
-        <!--&lt;!&ndash; Document Workflows &ndash;&gt;-->
-        <!--<component>-->
-            <!--<region-id>document-workflows</region-id>-->
-            <!--<url>/components/document-details/document-workflows</url>-->
-            <!--<properties>-->
-                <!--<nodeRef>{nodeRef}</nodeRef>-->
-            <!--</properties>-->
-        <!--</component>-->
-
-        <!--&lt;!&ndash; Document Versions &ndash;&gt;-->
-        <!--<component>-->
-            <!--<region-id>document-versions</region-id>-->
-            <!--<url>/components/document-details/document-versions</url>-->
-            <!--<properties>-->
-                <!--<nodeRef>{nodeRef}</nodeRef>-->
-            <!--</properties>-->
-        <!--</component>-->
-
-        <!--&lt;!&ndash; Uploaders &ndash;&gt;-->
-        <!--<component>-->
-            <!--<region-id>html-upload</region-id>-->
-            <!--<url>/components/upload/html-upload</url>-->
-        <!--</component>-->
-        <!--<component>-->
-            <!--<region-id>flash-upload</region-id>-->
-            <!--<url>/components/upload/flash-upload</url>-->
-        <!--</component>-->
-        <!--<component>-->
-            <!--<region-id>file-upload</region-id>-->
-            <!--<url>/components/upload/file-upload</url>-->
-        <!--</component>-->
-        <!--<component>-->
-            <!--<region-id>dnd-upload</region-id>-->
-            <!--<url>/components/upload/dnd-upload</url>-->
-        <!--</component>-->
-
-        <!--&lt;!&ndash; Custom Code &ndash;&gt;-->
-        <!--<component>-->
-            <!--<region-id>doclib-custom</region-id>-->
-            <!--<url>/components/documentlibrary/doclib-custom</url>-->
-        <!--</component>-->
 
     </components>
 </template-instance>

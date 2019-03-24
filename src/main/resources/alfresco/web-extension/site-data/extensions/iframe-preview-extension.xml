@@ -39,6 +39,18 @@
                             <param name="href">{documentDetailsUrl}</param>
                             <param name="target">_blank</param>
                         </action>
+
+                        <!-- Edit online AOS -->
+                        <action id="magenta-document-edit-online-aos" type="javascript" label="actions.document.edit-online" icon="magenta-document-edit-online">
+                            <param name="function">onActionEditOnlineAos</param>
+                            <permissions>
+                            <permission allow="true">Write</permission>
+                            </permissions>
+                            <evaluator>evaluator.doclib.action.isAosOnlineEditAvailable</evaluator>
+                            <evaluator>evaluator.doclib.action.notEditBrowser</evaluator>
+                            <evaluator negate="true">evaluator.doclib.action.isLockedForAos</evaluator>
+                            <evaluator>evaluator.doclib.action.isMimetypeEditableAos</evaluator>
+                        </action>
                     </actions>
                 </config>
 
@@ -50,8 +62,10 @@
                     <actionGroups>
                         <actionGroup id="document-details">
                             <action index="100" id="document-download"/>
-                            <action index="105" id="document-view-in-alfresco"/>
-                            <action index="190" id="document-edit-online"/>
+                            <action index="102" id="magenta-document-edit-online-aos" appendEvaluators="true">
+                                <evaluator>evaluator.doclib.action.DocumentEnableInSmartFolder</evaluator>
+                            </action>
+                            <action index="104" id="document-view-in-alfresco"/>
                         </actionGroup>
                     </actionGroups>
                 </config>
