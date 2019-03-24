@@ -100,12 +100,6 @@
                             <version>${project.version}</version>
                         </moduleDependency>
 
-                        <moduleDependency>
-                            <groupId>org.alfresco.aos-module</groupId>
-                            <artifactId>alfresco-aos-module</artifactId>
-                            <version>1.1.6</version>
-                            <type>amp</type>
-                        </moduleDependency>
                     </shareModules>
                 </configuration>
             </plugin>

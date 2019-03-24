@@ -7,6 +7,10 @@
     background-image: url(actions/document-edit-online-24.png) !important;
 }
 
+.iframe-preview .doclist .magenta-document-edit-online-aos a {
+    background-image: url(actions/document-edit-online-24.png) !important;
+}
+
 .iframe-preview .doclist .document-view-in-alfresco a {
     background-image: url(actions/document-view-in-alfresco-24.png) !important;
 }
