@@ -13,6 +13,18 @@
         </module>
 
         <module>
+            <id>Disable download</id>
+            <version>1.0</version>
+            <auto-deploy>true</auto-deploy>
+            <customizations>
+                <customization>
+                    <targetPackageRoot>org.alfresco.modules.preview</targetPackageRoot>
+                    <sourcePackageRoot>dk.magenta.iframe-preview.modules.preview</sourcePackageRoot>
+                </customization>
+            </customizations>
+        </module>
+
+        <module>
             <id>I-frame Preview customizations</id>
             <version>1.0</version>
             <auto-deploy>true</auto-deploy>

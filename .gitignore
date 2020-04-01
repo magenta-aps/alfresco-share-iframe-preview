@@ -5,3 +5,4 @@
 *.swp
 *.log
 log4j.properties
+share.log*
