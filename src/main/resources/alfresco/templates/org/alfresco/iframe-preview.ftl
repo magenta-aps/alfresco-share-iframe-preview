@@ -22,13 +22,25 @@
   </@>
   <@markup id="bd">
   <div id="bd" class="iframe-preview">
+
+    <#-- Disable download buttons etc... -->
+
+    <#--
     <@region id="actions-common" scope="template"/>
     <@region id="actions" scope="template"/>
     <@region id="node-header" scope="template"/>
     <@region id="document-actions" scope="template"/>
+    -->
+
+
+    <#-- Show the previewer -->
+
     <#if (config.scoped['DocumentDetails']['document-details'].getChildValue('display-web-preview') == "true")>
       <@region id="web-preview" scope="template"/>
     </#if>
+
+
+
     <#--<div class="yui-gc">-->
       <#--<div class="yui-u first">-->
         <#---->

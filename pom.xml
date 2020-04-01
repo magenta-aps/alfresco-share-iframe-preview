@@ -99,12 +99,12 @@
                         </moduleDependency>
 
                         <!--js console-->
-                        <moduleDependency>
+                        <!--moduleDependency>
                             <groupId>org.sharextras</groupId>
                             <artifactId>javascript-console-share</artifactId>
                             <version>1.0</version>
                             <type>amp</type>
-                        </moduleDependency>
+                        </moduleDependency-->
 
                     </shareModules>
                 </configuration>
