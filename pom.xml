@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>dk.magenta</groupId>
     <artifactId>iframe-preview-share</artifactId>
-    <version>1.1</version>
+    <version>1.1.1</version>
     <name>iframe-preview-share AMP project</name>
     <packaging>jar</packaging>
     <description>Manages the lifecycle of the iframe-preview-share AMP (Alfresco Module Package). Download buttons removed.</description>
