@@ -7,3 +7,4 @@ for (var i = 0; i < model.toolbarItems.length; i++) {
 }
 
 model.toolbarItems.splice(idxDownload, 1);
+model.toolbarItems.splice(idxDownload + 1, 1);
